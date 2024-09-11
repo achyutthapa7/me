@@ -11,7 +11,7 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "client/dist" // or "client/build" if that's your output directory
+        "distDir": "client/dist"
       }
     }
   ]
