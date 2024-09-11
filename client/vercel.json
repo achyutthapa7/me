@@ -1,14 +1,18 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist" // or "client/build" if that's your output directory
       }
-    ],
-    "builds": [
-      {
-        "src": "client/dist/index.html",
-        "use": "@vercel/static"
-      }
-    ]
-  }
+    }
+  ]
+}
